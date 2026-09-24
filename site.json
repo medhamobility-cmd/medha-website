@@ -1,0 +1,12 @@
+{
+  "logo": "/images/logo.png",
+  "hero_image": "",
+  "vehicles": [
+    {"image": "/images/dzire.webp", "category": "SEDAN", "name": "Maruti Suzuki Dzire", "description": "Everyday corporate mobility"},
+    {"image": "/images/ciaz.webp", "category": "LUXURY SEDAN", "name": "Maruti Suzuki Ciaz", "description": "Premium executive movement"},
+    {"image": "/images/innova-crysta.webp", "category": "PREMIUM SUV", "name": "Toyota Innova Crysta", "description": "Premium group movement"},
+    {"image": "/images/xpres-t-ev.webp", "category": "EV SEDAN", "name": "Tata Xpres-T EV", "description": "Electric corporate mobility"}
+  ],
+  "gallery_title": "Medha Mobility on the road.",
+  "gallery": []
+}

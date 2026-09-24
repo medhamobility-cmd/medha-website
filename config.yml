@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://www.medhamobility.com
+logo_url: /images/logo.png
+locale: en
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "website"
+    label: "Website"
+    editor:
+      preview: false
+    files:
+      - name: "images"
+        label: "Images and vehicles"
+        file: "content/site.json"
+        fields:
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+            hint: "Shown in the menu bar and footer. A PNG with a transparent background works best."
+          - label: "Top banner background photo"
+            name: "hero_image"
+            widget: "image"
+            required: false
+            hint: "Optional. A wide, dark photo looks best behind the white heading. Leave empty for no photo."
+          - label: "Vehicles"
+            name: "vehicles"
+            widget: "list"
+            summary: "{{fields.name}}"
+            add_to_top: false
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Category (e.g. SEDAN, SUV, EV SEDAN)", name: "category", widget: "string"}
+              - {label: "Vehicle name", name: "name", widget: "string"}
+              - {label: "Short description", name: "description", widget: "string", required: false}
+          - label: "Gallery heading"
+            name: "gallery_title"
+            widget: "string"
+            required: false
+          - label: "Gallery photos"
+            name: "gallery"
+            widget: "list"
+            required: false
+            summary: "{{fields.caption}}"
+            hint: "The Gallery section appears on the website only when it has at least one photo."
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
